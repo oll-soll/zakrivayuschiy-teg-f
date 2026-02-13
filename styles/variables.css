@@ -1,1 +1,13 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --font_family: 'Inter';
+    --accent_font: 'PressStart2P';
+    --font_weight-h2: 715;
+    --font_weight-text: 410;
+    --bg_page:
+        repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+        repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
+        linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
+    --width_block: clamp(375px, 90vw, 700px);
+    --label_stroke: rgb(250, 250, 250, 0.5);
+}
+
