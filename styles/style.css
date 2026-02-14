@@ -18,6 +18,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font_family), sans-serif;
+  font-size: 18px;
   font-variation-settings: 'wght' var(--font_weight-text);
   background-image: var(--bg_page);
   background-size: cover;
@@ -27,9 +28,9 @@
 
 .header_block {
   max-inline-size: 700px;
-  margin-block: 100px;
-  padding-block: clamp(120px, 11vw, 130px);
-  padding-inline: clamp(16px, 11vw, 125.5px);
+  margin-block: 98px;
+  padding-block: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem);;
+  padding-inline: clamp(1rem, -1.3438rem + 10vw, 7.65625rem);
   font-family: var(--accent_font);
   background-color: #fff;
   border: 2px solid #000;
@@ -43,14 +44,14 @@
 .title {
   padding-bottom: 20px;
   font-weight: 400;
-  font-size: 65px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-transform: uppercase;
   color: #000;
 }
 
 .subtitle {
   font-weight: 400;
-  font-size: 23px;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
   color: #000;
 }
@@ -61,9 +62,21 @@
   gap: 50px;
 
 }
-
+/*
 .card {
   display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: #fff;
+  border: 2px solid #000;
+  height: auto;
+}
+*/
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: var(--width_block);
+  justify-content: center;
   background-color: #fff;
   border: 2px solid #000;
 }
@@ -76,14 +89,18 @@
 }
 
 .card_image {
+  width: 100%;
   position: relative;
 }
 
 .card_img {
+  display: block;
   width: 100%;
-  height: auto;
   object-fit: cover;
   object-position: center;
+  aspect-ratio: 1 / 1;
+  border-bottom: 2px solid #000;
+  border-top: 2px solid #000;
 }
 
 .card_label {
@@ -110,33 +127,38 @@
   }
 }
 
-.card_text:first-of-type {
+.card_content {
+  display: flex;
+  flex-direction: column;
   padding: 25px;
+  gap: 25px;
 }
 
-.card_text:last-of-type {
-  padding: 0 25px 25px 25px;
+.card_text {
+  line-height: 1.15;
+  font-variation-settings: 'wght' var(--font_weight-text);
 }
 
-.like-icon {
-  position: absolute;
-  left: -50px;
+.card_like {
+  display: flex;
+  gap: 5px;
+  justify-content: end;
+  align-items: center;
 }
 
 .button {
   position: relative;
-  overflow: visible;
   color: #000;
   background-color: transparent;
   border: 2px solid #000;
+  padding: 7.5px;
+}
+
+.card__icon-button {
+  border: none;
 }
 
 .card__like-button {
-  display: flex;
-  padding: 12.5px 37px;
-  margin: 0 25px 25px;
-  align-items: center;
-  justify-self: end;
   min-width: 130px;
 }
 
@@ -152,6 +174,43 @@
     align-items: center;
     gap: 8px;
     margin: 50px auto 100px;
-    padding: 20.5px 20px;
+    padding: 10px 15px;
+    background-color: #fff;
 }
 
+#floppy-dialog[open] {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  padding: 30px 30px;
+  max-width: 353px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dialog_svg {
+  align-self: center;
+}
+
+.text_dialog {
+  font-family: var(--accent_font);
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.button_close {
+  margin-top: 10px;
+  grid-column: 1 / -1 ;
+  justify-self: stretch;
+  inline-size: 100%;
+  font-size: inherit;
+  text-transform: uppercase;
+}
+
+#floppy-dialog::backdrop {
+  background-color: #000;
+  opacity: 0.75;
+}
