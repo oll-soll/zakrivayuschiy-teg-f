@@ -17,9 +17,9 @@
   flex-direction: column;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font_family), sans-serif;
+  font-family: var(--font_family);
   font-size: 18px;
-  font-variation-settings: 'wght' var(--font_weight-text);
+  font-variation-settings: "wght" var(--font_weight-text);
   background-image: var(--bg_page);
   background-size: cover;
   background-attachment: fixed;
@@ -60,17 +60,7 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-
 }
-/*
-.card {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  background-color: #fff;
-  border: 2px solid #000;
-  height: auto;
-}
-*/
 
 .card {
   display: flex;
@@ -84,8 +74,8 @@
 .card_title {
   padding: 4px 10px;
   font-size: 18px;
-  font-variation-settings: 'wght' var(--font_weight-h2);
-  border-bottom: 2px solid var(--accent_color)
+  font-variation-settings: "wght" var(--font_weight-h2);
+  border-bottom: 2px solid var(--accent_color);
 }
 
 .card_image {
@@ -124,7 +114,7 @@
 }
 
 .img_sepia {
-  filter: sepia(70%)
+  filter: sepia(70%);
 }
 
 .img_invert {
@@ -151,7 +141,8 @@
     0 -1px var(--label_stroke);
 }
 
-@supports(text-stroke: 1px var(--label_stroke)) or (-webkit-text-stroke: 1px var(--label_stroke)) {
+@supports (text-stroke: 1px var(--label_stroke)) or
+  (-webkit-text-stroke: 1px var(--label_stroke)) {
   .card_label {
     -webkit-text-stroke: 1px var(--label_stroke);
     text-stroke: 1px var(--label_stroke);
@@ -168,7 +159,7 @@
 
 .card_text {
   line-height: 1.15;
-  font-variation-settings: 'wght' var(--font_weight-text);
+  font-variation-settings: "wght" var(--font_weight-text);
 }
 
 .card_like {
@@ -195,7 +186,7 @@
   background-color: var(--accent_color);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.5s ease-in-out
+  transition: transform 0.5s ease-in-out;
 }
 
 .button:hover::before {
@@ -300,11 +291,11 @@ button:focus-visible {
 }
 
 .save_button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 50px auto 100px;
-    padding: 15px 19px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 50px auto 100px;
+  padding: 15px 19px;
 }
 
 .save_icon {
@@ -323,7 +314,7 @@ button:focus-visible {
   .save_icon {
     width: 28px;
     height: 28px;
-}
+  }
 }
 
 #floppy-dialog[open] {
@@ -358,7 +349,7 @@ button:focus-visible {
 
 .button_close {
   margin-top: 10px;
-  grid-column: 1 / -1 ;
+  grid-column: 1 / -1;
   justify-self: stretch;
   inline-size: 100%;
   font-size: inherit;
@@ -369,4 +360,3 @@ button:focus-visible {
   background-color: var(--accent_color);
   opacity: 0.75;
 }
-

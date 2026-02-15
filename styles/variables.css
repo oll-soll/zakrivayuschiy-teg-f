@@ -1,6 +1,6 @@
 :root {
-    --font_family: 'Inter';
-    --accent_font: 'PressStart2P';
+    --font_family: 'Inter', sans-serif;
+    --accent_font: 'PressStart2P', fantasy;
     --font_weight-h2: 715;
     --font_weight-text: 410;
     --bg_page:
