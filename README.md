@@ -1,1 +1,1 @@
-https://oll-soll.github.io/zakrivayuschiy-teg-f/
+https://github.com/oll-soll/zakrivayuschiy-teg-f
