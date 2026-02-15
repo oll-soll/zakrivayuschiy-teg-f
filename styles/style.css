@@ -28,9 +28,9 @@
 
 .header_block {
   max-inline-size: 700px;
-  margin-block: 98px;
-  padding-block: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem);;
-  padding-inline: clamp(1rem, -1.3438rem + 10vw, 7.65625rem);
+  margin-block: 100px;
+  padding-block: clamp(7.375rem, 7.1549rem + 0.939vw, 8rem);
+  padding-inline: clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem);
   font-family: var(--accent_font);
   background-color: #fff;
   border: 2px solid #000;
@@ -178,6 +178,20 @@
     background-color: #fff;
 }
 
+@media (width <= 375px) {
+  .save_button {
+    flex-direction: column;
+  }
+}
+
+@media (width <= 375px) {
+  .save_icon {
+    width: 28px;
+    height: 28px;
+}
+
+}
+
 #floppy-dialog[open] {
   display: grid;
   grid-template-columns: auto auto;
@@ -186,6 +200,13 @@
   max-width: 353px;
   width: 100%;
   box-sizing: border-box;
+}
+
+@media (width <= 375px) {
+  #floppy-dialog[open] {
+    padding: 30px 40px;
+    max-width: 341px;
+  }
 }
 
 .dialog_svg {
