@@ -1,1 +1,1 @@
-https://github.com/oll-soll/slozhno-sosredotochitsya-fd
+https://oll-soll.github.io/zakrivayuschiy-teg-f/
