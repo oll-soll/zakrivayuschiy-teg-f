@@ -33,7 +33,7 @@
   padding-inline: clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem);
   font-family: var(--accent_font);
   background-color: #fff;
-  border: 2px solid #000;
+  border: 2px solid var(--accent_color);
   text-align: center;
 }
 
@@ -78,14 +78,14 @@
   width: var(--width_block);
   justify-content: center;
   background-color: #fff;
-  border: 2px solid #000;
+  border: 2px solid var(--accent_color);
 }
 
 .card_title {
   padding: 4px 10px;
   font-size: 18px;
   font-variation-settings: 'wght' var(--font_weight-h2);
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid var(--accent_color)
 }
 
 .card_image {
@@ -99,8 +99,8 @@
   object-fit: cover;
   object-position: center;
   aspect-ratio: 1 / 1;
-  border-bottom: 2px solid #000;
-  border-top: 2px solid #000;
+  border-bottom: 2px solid var(--accent_color);
+  border-top: 2px solid var(--accent_color);
 }
 
 .img_brightness {
@@ -180,14 +180,49 @@
 
 .button {
   position: relative;
-  color: #000;
-  background-color: transparent;
-  border: 2px solid #000;
-  padding: 7.5px;
+  color: var(--color_button);
+  background-color: var(--bg_button);
+  border: 2px solid var(--accent_color);
+  padding: 8.5px;
+  transition: box-shadow 0.3s ease;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-color: var(--accent_color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--accent_color);
 }
 
 .card__icon-button {
-  border: none;
+  padding: 0;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--accent_color);
+  box-shadow: none;
 }
 
 .card__like-button {
@@ -195,10 +230,12 @@
 }
 
 .button__text {
+  position: relative;
+  z-index: 10;
   font-family: var(--accent_font);
   font-size: 14px;
   line-height: 0.9;
-  color: #000;
+  mix-blend-mode: difference;
 }
 
 .save_button {
@@ -207,7 +244,12 @@
     gap: 8px;
     margin: 50px auto 100px;
     padding: 15px 19px;
-    background-color: #fff;
+}
+
+.save_icon {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
 }
 
 @media (width <= 375px) {
@@ -221,7 +263,6 @@
     width: 28px;
     height: 28px;
 }
-
 }
 
 #floppy-dialog[open] {
@@ -264,6 +305,7 @@
 }
 
 #floppy-dialog::backdrop {
-  background-color: #000;
+  background-color: var(--accent_color);
   opacity: 0.75;
 }
+

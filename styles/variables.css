@@ -9,5 +9,8 @@
         linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
     --width_block: clamp(375px, 90vw, 700px);
     --label_stroke: rgb(250, 250, 250, 0.5);
+    --bg_button: #fff;
+    --color_button: #fff;
+    --accent_color: #000;
 }
 
