@@ -316,12 +316,12 @@ button:focus-visible {
     height: 28px;
   }
 }
-
+/*
 #floppy-dialog[open] {
   display: grid;
   grid-template-columns: auto auto;
-  gap: 20px;
-  padding: 30px 30px;
+  gap: 30px;
+  padding: 28px;
   max-width: 353px;
   width: 100%;
   box-sizing: border-box;
@@ -333,9 +333,26 @@ button:focus-visible {
     max-width: 341px;
   }
 }
+*/
+
+#floppy-dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 353px;
+  padding: 28px;
+}
+
+.dialog_block {
+  display: flex;
+  gap: 20px;
+}
 
 .dialog_svg {
+  width: 39px;
+  height: 39px;
   align-self: center;
+  flex-shrink: 0;
 }
 
 .text_dialog {
@@ -359,4 +376,11 @@ button:focus-visible {
 #floppy-dialog::backdrop {
   background-color: var(--accent_color);
   opacity: 0.75;
+}
+
+@media (width <= 375px) {
+  #floppy-dialog[open] {
+    padding: 30px 40px;
+    max-width: 341px;
+  }
 }
