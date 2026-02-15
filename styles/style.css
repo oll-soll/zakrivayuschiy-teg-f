@@ -103,6 +103,38 @@
   border-top: 2px solid #000;
 }
 
+.img_brightness {
+  filter: brightness(200%);
+}
+
+.img_contrast {
+  filter: contrast(300%);
+}
+
+.img_blur {
+  filter: blur(1rem);
+}
+
+.img_grayscale {
+  filter: grayscale(1);
+}
+
+.img_rotate {
+  filter: hue-rotate(-80deg);
+}
+
+.img_sepia {
+  filter: sepia(70%)
+}
+
+.img_invert {
+  filter: invert(0.9);
+}
+
+.img_multi-filters {
+  filter: blur(2px) contrast(150%) hue-rotate(70deg);
+}
+
 .card_label {
   position: absolute;
   top: 25px;
@@ -174,7 +206,7 @@
     align-items: center;
     gap: 8px;
     margin: 50px auto 100px;
-    padding: 10px 15px;
+    padding: 15px 19px;
     background-color: #fff;
 }
 
