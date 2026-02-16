@@ -174,7 +174,7 @@
   color: var(--color_button);
   background-color: var(--bg_button);
   border: 2px solid var(--accent_color);
-  padding: 10px;
+  padding: 7.5px;
   transition: box-shadow 0.3s ease;
 }
 
@@ -298,16 +298,16 @@ button:focus-visible {
   padding: 15px 19px;
 }
 
-.save_icon {
-  position: relative;
-  z-index: 1;
-  mix-blend-mode: difference;
-}
-
 @media (width <= 375px) {
   .save_button {
     flex-direction: column;
   }
+}
+
+.save_icon {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
 }
 
 @media (width <= 375px) {
@@ -316,6 +316,7 @@ button:focus-visible {
     height: 28px;
   }
 }
+
 /*
 #floppy-dialog[open] {
   display: grid;
@@ -365,7 +366,6 @@ button:focus-visible {
 }
 
 .button_close {
-  margin-top: 10px;
   grid-column: 1 / -1;
   justify-self: stretch;
   inline-size: 100%;
@@ -380,7 +380,7 @@ button:focus-visible {
 
 @media (width <= 375px) {
   #floppy-dialog[open] {
-    padding: 30px 40px;
+    padding: 28px 38px;
     max-width: 341px;
   }
 }
